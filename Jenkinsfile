@@ -3,8 +3,8 @@ pipeline {
         label 'docker'
     }
 
-    stages {
-        stages('build from a docker file'){
+    stages{
+        stage('build from a docker file'){
             steps {
                 script {
                     sh 'docker build -t moka/docker-react -f Dockerfile.dev .'
@@ -12,7 +12,7 @@ pipeline {
             }
         }
 
-        stages('run those test'){
+        stage('run those test'){
             steps {
                 script {
 
