@@ -8,5 +8,3 @@ before_install:
 
 script:
   - docker run -e CI=true moka/docker-react npm run test
-
-#ksdn
